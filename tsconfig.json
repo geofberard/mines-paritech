@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
     "outDir": "./dist/",
     "sourceMap": true,
     "jsx": "react",
@@ -9,7 +9,5 @@
     "lib": ["es6", "dom"],
     "moduleResolution": "node"
   },
-  "include": [
-    "./public/"
-  ]
+  "include": ["./public/"]
 }
