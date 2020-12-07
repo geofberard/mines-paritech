@@ -8,7 +8,8 @@
     "@material-ui/icons": "4.9.1",
     "history": "^4.10.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "reveal.js": "^4.1.0"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --watch",
