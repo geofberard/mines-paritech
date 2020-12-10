@@ -7,11 +7,23 @@ import { Slide } from "../Slide";
 import { Title } from "../Title";
 import { JsonBox } from "../JsonBox";
 import { DataTable } from "../DataTable";
+import { CodeBox } from "../CodeBox";
+import { SubTitle } from "../SubTitle";
+import { SubContent } from "../SubContent";
+import { Cartouche } from "../Cartouche";
 
 const useStyle = makeStyles(theme => ({
   technos: {
     maxWidth: 500,
   },
+  cartouches : {
+    display: "flex",
+      flexWrap: "wrap",
+      "& > *": {
+        margin: theme.spacing(1),
+        padding: theme.spacing(1),
+      },
+  }
 }));
 
 const jsonExample = {
@@ -56,6 +68,24 @@ const carefullJson = [
     first_name: 42,
   },
 ];
+
+const mongoModel = {
+  first_name: "Paul",
+  surname: "Miller",
+  city: "London",
+  cars: [
+    {
+      model: "Bentley",
+      year: 1973,
+      value: 100000,
+    },
+    {
+      model: "Rolls Royce",
+      year: 1965,
+      value: 330000,
+    },
+  ],
+};
 
 export const Presentation = () => {
   const classes = useStyle();
@@ -171,7 +201,113 @@ export const Presentation = () => {
         <Slide>
           <Title>Schemaless</Title>
           <Content>Be carefull</Content>
-          <img src="./images/ben.gif" alt=""/>
+          <img src="./images/ben.gif" alt="" />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>BSON</Title>
+          <Content>Binary Representation of JSON - 16MB Maximum</Content>
+          <JsonBox json={{ hello: "world" }} />
+          <Content>Gives in BSON</Content>
+          <CodeBox>
+            \x16\x00\x00\x00\x02hello\x00\x06\x00\x00\x00world\x00\x00
+          </CodeBox>
+        </Slide>
+        <Slide>
+          <Title>BSON</Title>
+          <Content>Enriched Types</Content>
+          <img src="./images/bson_types.png" alt="MongoDB Logo" />
+          <SubContent>
+            <a
+              href="http://bsonspec.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              bsonspec.org
+            </a>
+          </SubContent>
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>Position</Title>
+          <img
+            src="./images/mongodb_position.png"
+            className="print-with-background"
+            alt="MongoDB Logo"
+          />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>Relational VS Document</Title>
+          <Content>Models Differences</Content>
+          <img
+            src="./images/comparaison_rvsd.png"
+            alt="relational_vs_document"
+          />
+        </Slide>
+        <Slide>
+          <Title>Relational VS Document</Title>
+          <Content>Relational Model</Content>
+          <img
+            src="./images/comparaison_relational.png"
+            alt="Relational Model"
+          />
+        </Slide>
+        <Slide>
+          <Title>Relational VS Document</Title>
+          <Content>Document Model</Content>
+          <JsonBox json={mongoModel} />
+        </Slide>
+        <Slide>
+          <Title>Relational VS Document</Title>
+          <Content>Terminology</Content>
+          <img src="./images/comparaison_terminology.png" alt="Terminology" />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>Performances</Title>
+          <div className={classes.cartouches}>
+            <Cartouche src="./images/perf_locality.png" label="Locality" />
+            <Cartouche src="./images/perf_caching.png" label="Caching" />
+            <Cartouche src="./images/perf_update.png" label="Update" />
+          </div>
+        </Slide>
+      </Section>
+      <Section>
+        <Slide alignItems="flex-start">
+          <Title>Benefits</Title>
+          <Content>Efficient</Content>
+          <List
+            elements={[
+              "Super low latency",
+              "Scale Easily",
+            ]}
+          />
+          <Content>Agility and flexibility</Content>
+          <List
+            elements={[
+              "Data models can evolve easily",
+              "Companies can adapt to changes quickly",
+            ]}
+          />
+          <Content>Intuitive, natural data representation</Content>
+          <List
+            elements={[
+              "Developers are more productive",
+              "Many types of applications are a good fit",
+            ]}
+          />
+          <Content>Reduces the need for joins, disk seeks</Content>
+          <List
+            elements={[
+              "Programming is more simple",
+              "Performance can be delivered at scale",
+            ]}
+          />
         </Slide>
       </Section>
     </>
