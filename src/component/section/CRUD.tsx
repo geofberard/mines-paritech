@@ -16,6 +16,7 @@ import {
   inserts,
 } from "./commands";
 import { Read } from "./crud/Read";
+import { Update } from "./crud/Update";
 
 const useStyle = makeStyles(theme => ({
   focused: {
@@ -130,6 +131,7 @@ export const CRUD = () => {
           <CodeBox code="> cusror.sort({city : -1}).limit(5).skip(3)" />
         </Slide>
       </Section>
+      <Update />
     </>
   );
 };

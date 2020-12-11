@@ -38,6 +38,22 @@ export const victorHugo = {
   },
 };
 
+export const victorHugoAddress = {
+  first_name: "Victor",
+  surname: "Hugo",
+  address: {
+    number: 6,
+    street_name: "Place des Vosges",
+    city: "Paris",
+    zip: "75004",
+  },
+};
+
+export const victorHugoFail = {
+  surname: "Hugo",
+  groups: ["Writer", "Painter"],
+};
+
 export const fullNested = {
   address: {
     number: 6,
@@ -82,3 +98,29 @@ export const cursorOperations =
   "> cusror.sort({city : -1})   // Sort in reverse alphabetical order\n" +
   "> cursor.limit(5)            // Limit the nomber of results to 5\n" +
   "> cusror.skip(3)             // Skip 3 elements besore returning the result";
+
+export const pushElements =
+  '{$push : {groups : "Poet"}}\n' +
+  '{$pushAll : {groups : ["Poet","Politician"]}}';
+
+export const popElements =
+  "{$pop : {groups : 1}}   // remove last element\n" +
+  "{$pop : {groups : -1}}  // remove first element";
+
+export const pullElements =
+  '{$pull : {groups : "Poet"}}\n' +
+  '{$pullAll : {groups : ["Poet","Politician"]}}';
+
+export const addElements =
+  '{$addToSet : {groups : "Poet"}}  //  Add "Poet"\n' +
+  '{$addToSet : {groups : "Poet"}}  //  Do nothing because exists';
+
+export const upsert =
+  '> db.member.update({surname : "Washington"}, \n' +
+  '          { $set : {groups : [ "Writer", "Painter"]}}, \n' +
+  "          { upsert : true })";
+
+export const updateMulti =
+  "> db.member.update({}, \n" +
+  '  { $set : {title : "Mr"}}, \n' +
+  "  { multi : true })\n";
