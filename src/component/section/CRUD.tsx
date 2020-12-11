@@ -147,9 +147,9 @@ export const CRUD = () => {
         <Slide alignItems="flex-start">
           <Title>Delete</Title>
           <Content>Syntax</Content>
-          <CodeBox code="remove({find_query})" />
+          <CodeBox code="<collection>.remove({find_query})" />
           <Content>Drop a collection</Content>
-          <CodeBox code="drop()" />
+          <CodeBox code="<collection>.drop()" />
         </Slide>
       </Section>
       <Section>

@@ -47,7 +47,7 @@ export const Read = () => {
         <Title>Read</Title>
         <Content centered>Find</Content>
         <Content>Syntax</Content>
-        <CodeBox code="find({query},{keys_filter})" />
+        <CodeBox code="<collection>.find({query},{keys_filter})" />
         <Content>Example</Content>
         <CodeBox code='> db.zips.find({state:"NY"},{city:true, _id:false})' />
         <CodeBox code={foundCities} />

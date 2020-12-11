@@ -243,3 +243,25 @@ export const design3Follower =
 
 export const design3Following =
   '{ _id : 1, _from : "vHugo", _to : "gWashington"}';
+
+export const installMacOs1 =
+  "$ cd path_to_downloaded_file\n$ tar xvf mongodb-macos-x86_64-4.4.2.tgz";
+
+export const installMacOs2 =
+  "$ sudo mkdir -p /usr/local/var/mongodb\n" +
+  "$ sudo chmod 777 /usr/local/var/mongodb";
+
+export const installMacOs3 = "$ cd mongodb-macos-x86_64-4.4.2/bin";
+
+export const installMacOs4 = "$ ./mongod --dbpath /usr/local/var/mongodb";
+
+export const installMacOs5 = "$ ./mongo";
+
+export const installWindows1 = '$ cd C:\\\n$ md "\\data\\db"';
+
+export const installWindows2 =
+  '$ cd "C:\\Program Files\\MongoDB\\Server\\4.2\\bin\\"';
+
+export const installWindows3 = '$ mongod.exe --dbpath="c:\\data\\db"';
+
+export const installWindows4 = "$ mongo.exe";
