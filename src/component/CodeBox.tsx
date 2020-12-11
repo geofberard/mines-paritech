@@ -4,21 +4,25 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyle = makeStyles(theme => ({
   codeBox: {
-    minWidth: 700,
+    minWidth: 750,
   },
   code: {
     padding: "15px !important",
-    fontSize: theme.typography.body2.fontSize,
+    fontSize: 15,
   },
 }));
 
-export const CodeBox: FC = ({ children }) => {
+interface CodeBoxProps {
+  code?: string,
+}
+
+export const CodeBox : FC<CodeBoxProps> = ({ code, children }) => {
   const classes = useStyle();
   return (
     <pre className={classes.codeBox}>
       <code data-trim contentEditable className={classes.code}>
-        {children}
+        {code}{children}
       </code>
     </pre>
   );
-};
+}; 

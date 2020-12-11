@@ -11,19 +11,12 @@ import { CodeBox } from "../CodeBox";
 import { SubTitle } from "../SubTitle";
 import { SubContent } from "../SubContent";
 import { Cartouche } from "../Cartouche";
+import { Horizontal } from "../Horizontal";
 
 const useStyle = makeStyles(theme => ({
   technos: {
     maxWidth: 500,
   },
-  cartouches : {
-    display: "flex",
-      flexWrap: "wrap",
-      "& > *": {
-        margin: theme.spacing(1),
-        padding: theme.spacing(1),
-      },
-  }
 }));
 
 const jsonExample = {
@@ -210,9 +203,7 @@ export const Presentation = () => {
           <Content>Binary Representation of JSON - 16MB Maximum</Content>
           <JsonBox json={{ hello: "world" }} />
           <Content>Gives in BSON</Content>
-          <CodeBox>
-            \x16\x00\x00\x00\x02hello\x00\x06\x00\x00\x00world\x00\x00
-          </CodeBox>
+          <CodeBox code="\x16\x00\x00\x00\x02hello\x00\x06\x00\x00\x00world\x00\x00"/>
         </Slide>
         <Slide>
           <Title>BSON</Title>
@@ -270,11 +261,11 @@ export const Presentation = () => {
       <Section>
         <Slide>
           <Title>Performances</Title>
-          <div className={classes.cartouches}>
+          <Horizontal>
             <Cartouche src="./images/perf_locality.png" label="Locality" />
             <Cartouche src="./images/perf_caching.png" label="Caching" />
             <Cartouche src="./images/perf_update.png" label="Update" />
-          </div>
+          </Horizontal>
         </Slide>
       </Section>
       <Section>

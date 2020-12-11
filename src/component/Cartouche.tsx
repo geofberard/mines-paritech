@@ -9,22 +9,22 @@ const useStyle = makeStyles(theme => ({
     fontSize: theme.typography.body2.fontSize,
   },
   cartoucheImg: {
-      height: 350,
-  }
+    height: 350,
+  },
 }));
 
 interface CartoucheProps {
   src: string;
-  label: string;
+  label?: string;
 }
 
 export const Cartouche = ({ src, label }: CartoucheProps) => {
   const classes = useStyle();
   return (
     <Paper>
-      <img src={src} alt={label} className={classes.cartoucheImg}/>
-      <br />
-      <div className={label}>{label}</div>
+      <img src={src} alt={label} className={classes.cartoucheImg} />
+      {label && <br />}
+      {label && <div className={label}>{label}</div>}
     </Paper>
   );
 };

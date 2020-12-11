@@ -35,7 +35,7 @@ module.exports = {
     ],
     "implicit-arrow-linebreak": "off",
     // "max-len": ["error", 130],
-    quotes: ["error", "double"],
+    quotes: ["error", "double", "avoid-escape"],
     "arrow-parens": ["error", "as-needed"],
     "import/prefer-default-export": "off",
     "operator-linebreak": ["error", "after", { overrides: { "=": "after" } }],

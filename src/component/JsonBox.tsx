@@ -14,5 +14,5 @@ interface JsonProps {
 
 export const JsonBox = ({ json }: JsonProps) => {
   const classes = useStyle();
-  return <CodeBox>{JSON.stringify(json, null, 2)}</CodeBox>;
+  return <CodeBox code={JSON.stringify(json, null, 2)} />;
 };

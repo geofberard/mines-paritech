@@ -5,11 +5,13 @@ import Reveal from "reveal.js";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm";
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown.esm";
 import RevealNotes from "reveal.js/plugin/notes/notes.esm";
-import { MainTitle } from "./parts/MainTitle";
-import { Plan } from "./parts/Plan";
-import { Presentation } from "./parts/Presentation";
+import { MainTitle } from "./section/MainTitle";
+import { Plan } from "./section/Plan";
+import { Presentation } from "./section/Presentation";
 import { Section } from "./Section";
 import { Slide } from "./Slide";
+import { Architecture } from "./section/Architecture";
+import { CRUD } from "./section/CRUD";
 
 export const initReveal = () =>
   Reveal.initialize({
@@ -38,6 +40,8 @@ export const RootApp: FC = () => {
         <MainTitle/>
         <Plan/>
         <Presentation/>
+        <Architecture/>
+        <CRUD/>
         <Section>
           <Slide>Vertical Slide 1</Slide>
           <Slide>Vertical Slide 2</Slide>
