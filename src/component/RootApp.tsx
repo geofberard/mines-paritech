@@ -12,6 +12,7 @@ import { Section } from "./Section";
 import { Slide } from "./Slide";
 import { Architecture } from "./section/Architecture";
 import { CRUD } from "./section/CRUD";
+import { CaseStudy } from "./section/CaseStudy";
 
 export const initReveal = () =>
   Reveal.initialize({
@@ -42,6 +43,7 @@ export const RootApp: FC = () => {
         <Presentation/>
         <Architecture/>
         <CRUD/>
+        <CaseStudy/>
         <Section>
           <Slide>Vertical Slide 1</Slide>
           <Slide>Vertical Slide 2</Slide>

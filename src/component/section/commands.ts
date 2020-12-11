@@ -21,9 +21,9 @@ export const foundCities =
 
 export const foundInArray =
   "{\n" +
-  '    first_name: "Victor", \n' +
-  '    surname: "Hugo", \n' +
-  '    groups : [ "Writer", "Painter"]\n' +
+  '  first_name: "Victor", \n' +
+  '  surname: "Hugo", \n' +
+  '  groups : [ "Writer", "Painter"]\n' +
   "}";
 
 export const victorHugo = {
@@ -199,9 +199,47 @@ export const geospacialResult =
 export const aggregateCmd =
   "> db.zips.aggregate([{ $group: {group} } , { $match: {group} }])\n" +
   '> db.zips.aggregate([{ $group: { _id: "$city", totalPop: { $sum: "$pop" } } }])';
-  
+
 export const aggregateResult =
   '{ "_id" : "WRANGELL", "totalPop" : 2573 }\n' +
   '{ "_id" : "SKAGWAY", "totalPop" : 692 }\n' +
   '{ "_id" : "THORNE BAY", "totalPop" : 744 }\n' +
   "...";
+
+export const postsDocument =
+  "{\n" +
+  '  _id: ObjectId("54853dd6dd8fc0fec931fcbc"),\n' +
+  '  title: "Title",\n' +
+  '  body: "...",\n' +
+  '  author: "Author",\n' +
+  '  date: "Date",\n' +
+  "  comments: [\n" +
+  '    { name: "Observer", comment: "Comment",}\n' +
+  "  ],\n" +
+  '  tags: ["Course", "MongoDB"],\n' +
+  "};";
+
+export const authorDocument = '{ _id: "UserName", email: "UserEmail" }';
+
+export const design1User =
+  "...\n" +
+  '{ _id : "vHugo", email : "victor.hugo@gmail.com", follower:["gWashington"]}\n' +
+  '{ _id : "gWashington", email : "george.washington@gmail.com"}\n' +
+  "...";
+
+export const design2User =
+  '{ _id : "vHugo", email : "victor.hugo@gmail.com"}\n' +
+  '{ _id : "gWashington", email : "george.washington@gmail.com"}';
+
+export const design2Follower =
+  '{ _id : 1, _from : "gWashington", _to : "vHugo"}';
+
+export const design3User =
+  '{ _id : "vHugo", email : "victor.hugo@gmail.com"}\n' +
+  '{ _id : "gWashington", email : "george.washington@gmail.com"}';
+
+export const design3Follower =
+  '{ _id : 1, _from : "gWashington", _to : "vHugo"}';
+
+export const design3Following =
+  '{ _id : 1, _from : "vHugo", _to : "gWashington"}';

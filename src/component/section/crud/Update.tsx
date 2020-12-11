@@ -5,25 +5,18 @@ import { Content } from "../../Content";
 import { JsonBox } from "../../JsonBox";
 import { Section } from "../../Section";
 import { Slide } from "../../Slide";
+import { SubContent } from "../../SubContent";
 import { Title } from "../../Title";
 import {
-  foundCities,
-  fullNested,
-  jonDoe,
-  queryCombination1,
-  queryCombination2,
-  victorHugo,
-  wrongQuery,
-  victorHugoAddress,
-  victorHugoFail,
-  pushElements,
+  addElements,
   popElements,
   pullElements,
-  addElements,
-  upsert,
+  pushElements,
   updateMulti,
+  upsert,
+  victorHugoAddress,
+  victorHugoFail,
 } from "../commands";
-import { SubContent } from "../../SubContent";
 
 const useStyle = makeStyles(theme => ({
   focused: {
