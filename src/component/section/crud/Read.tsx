@@ -46,7 +46,7 @@ export const Read = () => {
       <Slide alignItems="flex-start">
         <Title>Read</Title>
         <Content centered>Find</Content>
-        <Content>Syntax :</Content>
+        <Content>Syntax</Content>
         <CodeBox code="find({query},{keys_filter})" />
         <Content>Example</Content>
         <CodeBox code='> db.zips.find({state:"NY"},{city:true, _id:false})' />

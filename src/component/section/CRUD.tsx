@@ -14,6 +14,17 @@ import {
   cursorExample,
   cursorOperations,
   inserts,
+  explainCursor,
+  debuggingResult,
+  debuggingExemple,
+  explainDetails,
+  explainResult,
+  distinctCmd,
+  distinctExample,
+  geospacialCmd,
+  geospacialResult,
+  aggregateCmd,
+  aggregateResult,
 } from "./commands";
 import { Read } from "./crud/Read";
 import { Update } from "./crud/Update";
@@ -132,6 +143,85 @@ export const CRUD = () => {
         </Slide>
       </Section>
       <Update />
+      <Section>
+        <Slide alignItems="flex-start">
+          <Title>Delete</Title>
+          <Content>Syntax</Content>
+          <CodeBox code="remove({find_query})" />
+          <Content>Drop a collection</Content>
+          <CodeBox code="drop()" />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>Debugging</Title>
+          <CodeBox code="> db.zips.explain().find({query});" />
+          <Content>or</Content>
+          <CodeBox code={explainCursor} />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Debugging</Title>
+          <Content>Example</Content>
+          <CodeBox code={debuggingExemple} />
+          <JsonBox json={debuggingResult} />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Debugging</Title>
+          <Content>Execution detail</Content>
+          <CodeBox code={explainDetails} />
+          <JsonBox json={explainResult} />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide alignItems="flex-start">
+          <Title>Advanced</Title>
+          <Content>
+            Distinct (
+            <a
+              href="https://docs.mongodb.com/v3.2/reference/method/db.collection.distinct/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              details
+            </a>
+            )
+          </Content>
+          <CodeBox code={distinctCmd} />
+          <CodeBox code={distinctExample} />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Advanced</Title>
+          <Content>
+            Geospacial (
+            <a
+              href="http://docs.mongodb.org/manual/reference/operator/query-geospatial/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              details
+            </a>
+            )
+          </Content>
+          <CodeBox code={geospacialCmd} />
+          <CodeBox code={geospacialResult} />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Advanced</Title>
+          <Content>
+            Aggregate (
+            <a
+              href="https://docs.mongodb.com/v3.2/aggregation/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              details
+            </a>
+            )
+          </Content>
+          <CodeBox code={aggregateCmd} />
+          <CodeBox code={aggregateResult} />
+        </Slide>
+      </Section>
     </>
   );
 };

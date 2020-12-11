@@ -124,3 +124,84 @@ export const updateMulti =
   "> db.member.update({}, \n" +
   '  { $set : {title : "Mr"}}, \n' +
   "  { multi : true })\n";
+
+export const explainCursor =
+  "> cur = db.zips.find({query}); null;\n> cur.explain()";
+
+export const debuggingExemple =
+  '> db.zips.explain().find({state:"MA"},{city:true, _id:false}).sort({city : -1}).limit(5);';
+
+export const debuggingResult = {
+  queryPlanner: {
+    plannerVersion: 1,
+    namespace: "test.zips",
+    indexFilterSet: false,
+    parsedQuery: {
+      state: {
+        $eq: "MA",
+      },
+    },
+    serverInfo: {
+      host: "localhost",
+      port: 27017,
+      version: "4.0.4",
+      gitVersion: "f288a3bdf201007f3693c58e140056adf8b04839",
+    },
+    ok: 1,
+  },
+};
+
+export const explainDetails =
+  '> cur = db.zips.explain("executionStats").find({state:"MA"},{city:true, _id:false}).sort({city : -1}).limit(5); null;';
+
+export const explainResult = {
+  queryPlanner: {
+    namespace: "test.zips",
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 5,
+    executionTimeMillis: 20,
+    totalKeysExamined: 0,
+    totalDocsExamined: 29353,
+  },
+  serverInfo: {
+    host: "it-gbe",
+    port: 27017,
+    version: "3.2.11",
+    gitVersion: "009580ad490190ba33d1c6253ebd8d91808923e4",
+  },
+  ok: 1,
+};
+
+export const distinctCmd = "> db.zips.distinct({field} , {search_query})";
+
+export const distinctExample =
+  '> db.zips.distinct("state" , {})\n' +
+  "[\n" +
+  '	"MA",\n' +
+  '	"RI",\n' +
+  '	"NH",\n' +
+  "    ...\n" +
+  "]";
+
+export const geospacialCmd =
+  '> db.zips.createIndex( { loc : "2d" } )\n' +
+  '> db.zips.find( { "loc": {$near : [ -112.416728, 37.781334 ] } } ).limit(5)';
+
+export const geospacialResult =
+  '{ "_id" : "84759", "city" : "PANGUITCH", "loc" : [ -112.436886, 37.80777 ], "pop" : 1797, "state" : "UT" }\n' +
+  '{ "_id" : "84710", "city" : "ALTON", "loc" : [ -112.548389, 37.469905 ], "pop" : 159, "state" : "UT" }\n' +
+  '{ "_id" : "84760", "city" : "PARAGONAH", "loc" : [ -112.773972, 37.89172 ], "pop" : 334, "state" : "UT" }\n' +
+  '{ "_id" : "84717", "city" : "BRYCE CANYON", "loc" : [ -112.074311, 37.608427 ], "pop" : 958, "state" : "UT" }\n' +
+  '{ "_id" : "84761", "city" : "PAROWAN", "loc" : [ -112.832251, 37.844861 ], "pop" : 1988, "state" : "UT" }';
+
+export const aggregateCmd =
+  "> db.zips.aggregate([{ $group: {group} } , { $match: {group} }])\n" +
+  '> db.zips.aggregate([{ $group: { _id: "$city", totalPop: { $sum: "$pop" } } }])';
+  
+export const aggregateResult =
+  '{ "_id" : "WRANGELL", "totalPop" : 2573 }\n' +
+  '{ "_id" : "SKAGWAY", "totalPop" : 692 }\n' +
+  '{ "_id" : "THORNE BAY", "totalPop" : 744 }\n' +
+  "...";

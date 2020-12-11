@@ -37,7 +37,7 @@ export const Update = () => {
     <Section>
       <Slide alignItems="flex-start">
         <Title>Update</Title>
-        <Content>Syntax :</Content>
+        <Content>Syntax</Content>
         <CodeBox code="update( {find_query} , {update_query}, {update_params} )" />
         <Content>Example</Content>
         <CodeBox code='update({surname : "Hugo"}, {surname : "Hugo", groups : [ "Writer", "Painter"]})' />
