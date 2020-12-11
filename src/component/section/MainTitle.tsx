@@ -11,6 +11,6 @@ export const MainTitle = () => (
     <Title>The Humongous Database</Title>
     <SubTitle>Geoffrey Berard / <a href="http://twitter.com/geofberard">@geofberard</a></SubTitle>
     <SubTitle>geoffrey.berard@gmail.com</SubTitle>
-    <SubTitle><a href="http://goo.gl/lQe0pD">goo.gl/lQe0pD</a> - <a href="./MongoDB.pdf" target="_blank"> pdf</a></SubTitle>
+    <SubTitle><a href="https://bit.ly/3oH4mMb">bit.ly/3oH4mMb</a> - <a href="./MongoDB.pdf" target="_blank"> pdf</a></SubTitle>
   </Slide> 
 );
