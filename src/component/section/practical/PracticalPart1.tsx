@@ -275,7 +275,7 @@ export const PracticalPart1 = () => {
           </SubContent>
           <SubContent>
             II.4. List all zones with more than 100 000 inhabitants located on
-            the east of meridian 110.{" "}
+            the east of meridian -110.{" "}
             <span className={classes.focused}>[Query]</span>
           </SubContent>
           <SubContent>
