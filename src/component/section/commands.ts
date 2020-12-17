@@ -257,6 +257,12 @@ export const installMacOs4 = "$ ./mongod --dbpath /usr/local/var/mongodb";
 
 export const installMacOs5 = "$ ./mongo";
 
+export const installToolsMacOs1 = "$ unzip mongodb-database-tools-*.zip";
+
+export const installToolsMacOs2 = "$ cd mongodb-macos-x86_64-4.4.2/bin";
+
+export const installToolsMacOs3 = "$ ./mongoimport <your params>";
+
 export const installWindows1 = '$ cd C:\\\n$ md "\\data\\db"';
 
 export const installWindows2 =
@@ -265,3 +271,15 @@ export const installWindows2 =
 export const installWindows3 = '$ mongod.exe --dbpath="c:\\data\\db"';
 
 export const installWindows4 = "$ mongo.exe";
+
+export const installPip = "$  pip3 install Django\n$  pip3 install pymongo";
+
+export const runPythonServer =
+  "$  cd src/main/python\n" +
+  "$  $ python3 src/main/python/manage.py runserver";
+
+export const gitCloneRepo =
+  "$ git clone https://github.com/geofberard/MongoTasks.git\n" +
+  "$ cd MongoTasks";
+
+export const gitReset = "$ git reset HEAD --hard\n$ git checkout step-X";
