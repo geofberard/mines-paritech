@@ -51,7 +51,7 @@ export const PracticalPart1 = () => {
             alt="MongoDB Logo"
             className="print-with-background"
           />
-          <Title>Part1</Title>
+          <Title>Part 1</Title>
         </Slide>
       </Section>
       <Section>

@@ -14,6 +14,8 @@ import { Architecture } from "./section/Architecture";
 import { CRUD } from "./section/CRUD";
 import { CaseStudy } from "./section/CaseStudy";
 import { Practical } from "./section/Practical";
+import { Replication } from "./section/Replication";
+import { Bibliography } from "./section/Bibliography";
 
 export const initReveal = () =>
   Reveal.initialize({
@@ -46,6 +48,8 @@ export const RootApp: FC = () => {
         <CRUD/>
         <CaseStudy/>
         <Practical/>
+        <Replication/>
+        <Bibliography/>
       </div>
     </ThemeProvider>
   );

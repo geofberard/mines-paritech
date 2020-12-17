@@ -283,3 +283,15 @@ export const gitCloneRepo =
   "$ cd MongoTasks";
 
 export const gitReset = "$ git reset HEAD --hard\n$ git checkout step-X";
+
+export const writeConcernQuery =
+  "> db.products.insert(\n" +
+  '  { item: "envelopes", qty : 100, type: "Clasp" },\n' +
+  "  { writeConcern: { w: 2, wtimeout: 5000 } }\n" +
+  ")";
+
+export const writeConcernDefault =
+  "> cfg = rs.conf()\n" +
+  "> cfg.settings = {}\n" +
+  '> cfg.settings.getLastErrorDefaults = { w: "majority", wtimeout: 5000 }\n' +
+  "> rs.reconfig(cfg)";

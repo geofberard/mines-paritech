@@ -22,6 +22,7 @@ import {
 import { SubContent } from "../SubContent";
 import { PracticalPart1 } from "./practical/PracticalPart1";
 import { PracticalPart2 } from "./practical/PracticalPart2";
+import { PracticalPart3 } from "./practical/PracticalPart3";
 
 const useStyle = makeStyles(theme => ({
   limitHeight: {

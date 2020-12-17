@@ -9,7 +9,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: theme.typography.body2.fontSize,
   },
   cartoucheImg: {
-    height: 350,
+    maxHeight: "350px!important",
   },
 }));
 
