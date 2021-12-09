@@ -6,6 +6,10 @@ import { Section } from "../../Section";
 import { Slide } from "../../Slide";
 import { Title } from "../../Title";
 import {
+  runWithDocker1,
+  runWithDocker2,
+  runWithDocker3,
+  runWithDocker4,
   installMacOs1,
   installMacOs2,
   installMacOs3,
@@ -84,6 +88,24 @@ export const PracticalPart1 = () => {
             alt="Relational Model"
             className={classes.simpleArchi} 
           />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide alignItems="flex-start">
+          <Title>Install MongoDB</Title>
+          <Content centered>Run with Docker</Content>
+          <Content>Start MongoDB Daemon (server)</Content>
+          <CodeBox code={runWithDocker1} />
+          <Content>In another shell, run MongoShell (client)</Content>
+          <CodeBox code={runWithDocker2} />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Install MongoDB</Title>
+          <Content centered>Run with Docker</Content>
+          <Content>Import a json file in the container</Content>
+          <CodeBox code={runWithDocker3} />
+          <Content>Load it into the database</Content>
+          <CodeBox code={runWithDocker4} />
         </Slide>
       </Section>
       <Section>
