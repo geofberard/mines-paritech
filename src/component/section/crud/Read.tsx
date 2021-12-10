@@ -135,7 +135,7 @@ export const Read = () => {
         <Title>Read</Title>
         <Content>Query combinaison combinaison ???</Content>
         <CodeBox code={queryCombination1} />
-        <JsonBox json={queryCombination2} />
+        <CodeBox code={queryCombination2} />
       </Slide>
       <Slide alignItems="flex-start">
         <Content>Query combinaison combinaison ???</Content>
