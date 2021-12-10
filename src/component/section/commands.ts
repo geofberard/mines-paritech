@@ -244,15 +244,17 @@ export const design3Follower =
 export const design3Following =
   '{ _id : 1, _from : "vHugo", _to : "gWashington"}';
 
-export const runWithDocker1 = "docker run --name mongo-server -d mongo";
+export const runWithDocker1 = "$ docker run --name mongo-server mongo";
 
-export const runWithDocker2 = "docker exec -it mongo-server mongo";
+export const runWithDocker2 = "$ docker start -i mongo-server";
 
-export const runWithDocker3 = 
-  "docker cp <path>/file.json mongo-server:/tmp/<file>.json";
+export const runWithDocker3 = "$ docker exec -it mongo-server mongo";
 
 export const runWithDocker4 = 
-  "docker exec mongo-server mongoimport --db test --collection emails --file /tmp/<file>.json";
+  "$ docker cp <path>/file.json mongo-server:/tmp/<file>.json";
+
+export const runWithDocker5 = 
+  "$ docker exec mongo-server mongoimport --db test --collection emails --file /tmp/<file>.json";
 
 export const installMacOs1 =
   "$ cd path_to_downloaded_file\n$ tar xvf mongodb-macos-x86_64-4.4.2.tgz";
