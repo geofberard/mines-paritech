@@ -20,6 +20,8 @@ import {
   runPythonServer,
   installPip,
   gitCloneRepo,
+  runWithDocker7,
+  runWithDocker6,
 } from "../commands";
 import { SubContent } from "../../SubContent";
 import { PracticalGit } from "./PracticalGit";
@@ -94,6 +96,15 @@ export const PracticalPart2 = () => {
             alt="MongoTasks"
             className={classes.imageMid}
           />
+        </Slide>
+      </Section>
+      <Section>
+        <Slide alignItems="flex-start">
+          <Title>Run MongoDB</Title>
+          <Content>Start server with docker</Content>
+          <CodeBox code={runWithDocker6} />
+          <Content>If needed, connect with mongo shell</Content>
+          <CodeBox code={runWithDocker7} />
         </Slide>
       </Section>
       <Section>

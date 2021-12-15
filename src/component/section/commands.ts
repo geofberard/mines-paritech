@@ -256,6 +256,10 @@ export const runWithDocker4 =
 export const runWithDocker5 = 
   "$ docker exec mongo-server mongoimport --db test --collection emails --file /tmp/<file>.json";
 
+export const runWithDocker6 = "$ docker run --rm --name mongo-tasks -p 27017:27017 mongo";
+
+export const runWithDocker7 = "$ docker exec -it mongo-tasks mongo";
+
 export const installMacOs1 =
   "$ cd path_to_downloaded_file\n$ tar xvf mongodb-macos-x86_64-4.4.2.tgz";
 
@@ -288,7 +292,7 @@ export const installPip = "$  pip3 install Django\n$  pip3 install pymongo";
 
 export const runPythonServer =
   "$  cd src/main/python\n" +
-  "$  $ python3 src/main/python/manage.py runserver";
+  "$  python3 manage.py runserver";
 
 export const gitCloneRepo =
   "$ git clone https://github.com/geofberard/MongoTasks.git\n" +
