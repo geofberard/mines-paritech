@@ -95,9 +95,9 @@ export const cursorExample =
   '> cursor.next()      // > "CUSHMAN"';
 
 export const cursorOperations =
-  "> cusror.sort({city : -1})   // Sort in reverse alphabetical order\n" +
+  "> cursor.sort({city : -1})   // Sort in reverse alphabetical order\n" +
   "> cursor.limit(5)            // Limit the nomber of results to 5\n" +
-  "> cusror.skip(3)             // Skip 3 elements besore returning the result";
+  "> cursor.skip(3)             // Skip 3 elements besore returning the result";
 
 export const pushElements =
   '{$push : {groups : "Poet"}}\n' +

@@ -139,7 +139,7 @@ export const CRUD = () => {
           <Content>Operation on cursor</Content>
           <CodeBox code={cursorOperations} />
           <Content>They can be combined</Content>
-          <CodeBox code="> cusror.sort({city : -1}).limit(5).skip(3)" />
+          <CodeBox code="> cursor.sort({city : -1}).limit(5).skip(3)" />
         </Slide>
       </Section>
       <Update />
