@@ -57,16 +57,6 @@ export const PracticalPart2 = () => {
     <>
       <Section>
         <Slide>
-          <img
-            src="./images/mongodb_logo.png"
-            alt="MongoDB Logo"
-            className="print-with-background"
-          />
-          <Title>Part 2</Title>
-        </Slide>
-      </Section>
-      <Section>
-        <Slide>
           <Title>MongoTasks</Title>
           <Content centered>MongoDB based App</Content>
           <img

@@ -104,6 +104,7 @@ export const Architecture = () => {
             className="print-with-background"
           />
           <Title>Architecture</Title>
+          <SubTitle>09/12/2022</SubTitle>
         </Slide>
       </Section>
       <Section>
@@ -148,12 +149,6 @@ export const Architecture = () => {
             className="print-with-background"
             alt="Replica Set"
           />
-        </Slide>
-      </Section>
-      <Section>
-        <Slide>
-          <Title>Scalability</Title>
-          <Cartouche src="./images/scalability.png" />
         </Slide>
       </Section>
       <Section>

@@ -80,6 +80,17 @@ const mongoModel = {
   ],
 };
 
+const alternativeMongoModel = {
+  model: "Bentley",
+  year: 1973,
+  value: 100000,
+  owner: {
+    first_name: "Paul",
+    surname: "Miller",
+    city: "London",
+  }
+};
+
 export const Presentation = () => {
   const classes = useStyle();
   return (
@@ -92,6 +103,7 @@ export const Presentation = () => {
             className="print-with-background"
           />
           <Title>Presentation</Title>
+          <SubTitle>07/12/2022</SubTitle>
         </Slide>
       </Section>
       <Section>
@@ -154,7 +166,7 @@ export const Presentation = () => {
           <DataTable
             data={[
               ["first_name", "last_name", "birthday"],
-              ["Louis", "Armstrong", "4 août 1901"],
+              ["Louis", "Armstrong", "4/08/1901"],
             ]}
           />
         </Slide>
@@ -164,8 +176,8 @@ export const Presentation = () => {
           <DataTable
             data={[
               ["first_name", "last_name", "title", "birthday"],
-              ["Louis", "Armstrong", "", "4 août 1901"],
-              ["Paul", "McCartney", "Sir", "18 June 1942"],
+              ["Louis", "Armstrong", "", "4/08/1901"],
+              ["Paul", "McCartney", "Sir", "18/06/1942"],
             ]}
           />
         </Slide>
@@ -175,8 +187,8 @@ export const Presentation = () => {
           <DataTable
             data={[
               ["first_name", "last_name", "title", "nickname", "birthday"],
-              ["Louis", "Armstrong", "", "", "04 août 1901"],
-              ["Paul", "McCartney", "Sir", "", "18 June 1942"],
+              ["Louis", "Armstrong", "", "", "04/08/1901"],
+              ["Paul", "McCartney", "Sir", "", "18/06/1942"],
               ["Gordon Matthew Thomas", "Summer", "", "Sting", "02/10/1951"],
             ]}
           />
@@ -203,7 +215,7 @@ export const Presentation = () => {
           <Content>Binary Representation of JSON - 16MB Maximum</Content>
           <JsonBox json={{ hello: "world" }} />
           <Content>Gives in BSON</Content>
-          <CodeBox code="\x16\x00\x00\x00\x02hello\x00\x06\x00\x00\x00world\x00\x00"/>
+          <CodeBox code="\x16\x00\x00\x00\x02hello\x00\x06\x00\x00\x00world\x00\x00" />
         </Slide>
         <Slide>
           <Title>BSON</Title>
@@ -254,6 +266,11 @@ export const Presentation = () => {
         </Slide>
         <Slide>
           <Title>Relational VS Document</Title>
+          <Content>Alternative Document Model</Content>
+          <JsonBox json={alternativeMongoModel} />
+        </Slide>
+        <Slide>
+          <Title>Relational VS Document</Title>
           <Content>Terminology</Content>
           <img src="./images/comparaison_terminology.png" alt="Terminology" />
         </Slide>
@@ -266,6 +283,12 @@ export const Presentation = () => {
             <Cartouche src="./images/perf_caching.png" label="Caching" />
             <Cartouche src="./images/perf_update.png" label="Update" />
           </Horizontal>
+        </Slide>
+      </Section>
+      <Section>
+        <Slide>
+          <Title>Scalability</Title>
+          <Cartouche src="./images/scalability.png" />
         </Slide>
       </Section>
       <Section>

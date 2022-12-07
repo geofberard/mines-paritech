@@ -8,12 +8,11 @@ import RevealNotes from "reveal.js/plugin/notes/notes.esm";
 import { MainTitle } from "./section/MainTitle";
 import { Plan } from "./section/Plan";
 import { Presentation } from "./section/Presentation";
-import { Section } from "./Section";
-import { Slide } from "./Slide";
 import { Architecture } from "./section/Architecture";
 import { CRUD } from "./section/CRUD";
 import { CaseStudy } from "./section/CaseStudy";
-import { Practical } from "./section/Practical";
+import { Practical1 } from "./section/Practical1";
+import { Practical2 } from "./section/Practical2";
 import { Replication } from "./section/Replication";
 import { Bibliography } from "./section/Bibliography";
 
@@ -44,10 +43,11 @@ export const RootApp: FC = () => {
         <MainTitle/>
         <Plan/>
         <Presentation/>
-        <Architecture/>
         <CRUD/>
+        <Practical1/>
+        <Architecture/>
         <CaseStudy/>
-        <Practical/>
+        <Practical2/>
         <Replication/>
         <Bibliography/>
       </div>
