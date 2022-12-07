@@ -248,7 +248,7 @@ export const runWithDocker1 = "$ docker run --name mongo-server mongo";
 
 export const runWithDocker2 = "$ docker start -i mongo-server";
 
-export const runWithDocker3 = "$ docker exec -it mongo-server mongo";
+export const runWithDocker3 = "$ docker exec -it mongo-server mongosh";
 
 export const runWithDocker4 = 
   "$ docker cp <path>/file.json mongo-server:/tmp/<file>.json";
@@ -258,7 +258,7 @@ export const runWithDocker5 =
 
 export const runWithDocker6 = "$ docker run --rm --name mongo-tasks -p 27017:27017 mongo";
 
-export const runWithDocker7 = "$ docker exec -it mongo-tasks mongo";
+export const runWithDocker7 = "$ docker exec -it mongo-tasks mongosh";
 
 export const installMacOs1 =
   "$ cd path_to_downloaded_file\n$ tar xvf mongodb-macos-x86_64-4.4.2.tgz";
