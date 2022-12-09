@@ -116,7 +116,8 @@ export const Presentation = () => {
               "Non relational",
               "Dynamic : Schemaless",
               "No query lanquage",
-              "No transactions",
+              "No transactions (by default)",
+              "Atomic operation on document",
               "Scalable : Auto Sharding",
               "Made in C++",
             ]}

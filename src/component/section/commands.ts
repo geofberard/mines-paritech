@@ -288,7 +288,7 @@ export const installWindows3 = '$ mongod.exe --dbpath="c:\\data\\db"';
 
 export const installWindows4 = "$ mongo.exe";
 
-export const installPip = "$ pip3 install Django\n$  pip3 install pymongo";
+export const installPip = "$ pip3 install Django\n$ pip3 install pymongo";
 
 export const runPythonServer =
   "$  cd src/main/python\n" +

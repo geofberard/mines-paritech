@@ -13,7 +13,6 @@ import { CRUD } from "./section/CRUD";
 import { CaseStudy } from "./section/CaseStudy";
 import { Practical1 } from "./section/Practical1";
 import { Practical2 } from "./section/Practical2";
-import { Replication } from "./section/Replication";
 import { Bibliography } from "./section/Bibliography";
 
 export const initReveal = () =>
@@ -48,7 +47,6 @@ export const RootApp: FC = () => {
         <Architecture/>
         <CaseStudy/>
         <Practical2/>
-        <Replication/>
         <Bibliography/>
       </div>
     </ThemeProvider>
