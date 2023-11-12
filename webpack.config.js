@@ -1,10 +1,13 @@
 const webpack = require("webpack");
 
 module.exports = {
-  entry: [`${__dirname}/src/main.tsx`],
+  entry: {
+    mongodb : `${__dirname}/src/mongodb.tsx`,
+    docker: `${__dirname}/src/docker.tsx`
+  },
   output: {
     path: __dirname + "/public",
-    filename: "index.js",
+    filename: "[name]/index.js"
   },
   devServer: {
     inline: true,

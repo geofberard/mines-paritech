@@ -5,15 +5,15 @@ import Reveal from "reveal.js";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm";
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown.esm";
 import RevealNotes from "reveal.js/plugin/notes/notes.esm";
-import { MainTitle } from "./section/MainTitle";
-import { Plan } from "./section/Plan";
-import { Presentation } from "./section/Presentation";
-import { Architecture } from "./section/Architecture";
-import { CRUD } from "./section/CRUD";
-import { CaseStudy } from "./section/CaseStudy";
-import { Practical1 } from "./section/Practical1";
-import { Practical2 } from "./section/Practical2";
-import { Bibliography } from "./section/Bibliography";
+import { MainTitle } from "../component/section/MainTitle";
+import { Plan } from "../component/section/Plan";
+import { Presentation } from "../component/section/Presentation";
+import { Architecture } from "../component/section/Architecture";
+import { CRUD } from "../component/section/CRUD";
+import { CaseStudy } from "../component/section/CaseStudy";
+import { Practical1 } from "../component/section/Practical1";
+import { Practical2 } from "../component/section/Practical2";
+import { Bibliography } from "../component/section/Bibliography";
 
 export const initReveal = () =>
   Reveal.initialize({
