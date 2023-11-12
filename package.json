@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --watch",
-    "build": "webpack -p --progress",
+    "build": "webpack --mode production",
     "deploy": "webpack --mode production && git add . && git commit -m Packaging && git push origin :gh-pages ; git subtree push --prefix=public origin gh-pages && git reset HEAD~1 --hard"
   },
   "devDependencies": {
