@@ -5,6 +5,7 @@ import Reveal from "reveal.js";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight.esm";
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown.esm";
 import RevealNotes from "reveal.js/plugin/notes/notes.esm";
+import { MainTitle } from "./section/MainTitle";
 
 export const initReveal = () =>
     Reveal.initialize({
@@ -30,7 +31,7 @@ export const RootApp: FC = () => {
     return (
         <ThemeProvider theme={theme}>
             <div className="slides">
-                Hello World !!!!
+                <MainTitle/>
             </div>
         </ThemeProvider>
     );

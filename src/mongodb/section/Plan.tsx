@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Content } from "../Content";
-import { Details } from "../Details";
-import { List } from "../List";
-import { Section } from "../Section";
-import { Slide } from "../Slide";
-import { SubTitle } from "../SubTitle";
-import { Title } from "../Title";
+import { Content } from "../../component/Content";
+import { Details } from "../../component/Details";
+import { List } from "../../component/List";
+import { Section } from "../../component/Section";
+import { Slide } from "../../component/Slide";
+import { SubTitle } from "../../component/SubTitle";
+import { Title } from "../../component/Title";
 
 export const Plan = () => (
   <Section>

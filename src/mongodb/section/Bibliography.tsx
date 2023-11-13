@@ -1,11 +1,11 @@
 import * as React from "react";
 import { makeStyles } from "@material-ui/core";
-import { Slide } from "../Slide";
-import { SubTitle } from "../SubTitle";
-import { Title } from "../Title";
-import { Content } from "../Content";
-import { Section } from "../Section";
-import { SubContent } from "../SubContent";
+import { Slide } from "../../component/Slide";
+import { SubTitle } from "../../component/SubTitle";
+import { Title } from "../../component/Title";
+import { Content } from "../../component/Content";
+import { Section } from "../../component/Section";
+import { SubContent } from "../../component/SubContent";
 
 const useStyle = makeStyles(theme => ({
   limitHeight: {

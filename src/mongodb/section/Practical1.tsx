@@ -1,8 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import * as React from "react";
-import { Section } from "../Section";
-import { Slide } from "../Slide";
-import { Title } from "../Title";
+import { Section } from "../../component/Section";
+import { Slide } from "../../component/Slide";
+import { Title } from "../../component/Title";
 import { PracticalPart1 } from "./practical/PracticalPart1";
 
 const useStyle = makeStyles(theme => ({

@@ -1,17 +1,17 @@
 import { makeStyles } from "@material-ui/core";
 import * as React from "react";
-import { Content } from "../Content";
-import { List } from "../List";
-import { Section } from "../Section";
-import { Slide } from "../Slide";
-import { Title } from "../Title";
-import { JsonBox } from "../JsonBox";
-import { DataTable } from "../DataTable";
-import { CodeBox } from "../CodeBox";
-import { SubTitle } from "../SubTitle";
-import { SubContent } from "../SubContent";
-import { Cartouche } from "../Cartouche";
-import { Horizontal } from "../Horizontal";
+import { Content } from "../../component/Content";
+import { List } from "../../component/List";
+import { Section } from "../../component/Section";
+import { Slide } from "../../component/Slide";
+import { Title } from "../../component/Title";
+import { JsonBox } from "../../component/JsonBox";
+import { DataTable } from "../../component/DataTable";
+import { CodeBox } from "../../component/CodeBox";
+import { SubTitle } from "../../component/SubTitle";
+import { SubContent } from "../../component/SubContent";
+import { Cartouche } from "../../component/Cartouche";
+import { Horizontal } from "../../component/Horizontal";
 
 const useStyle = makeStyles(theme => ({
   technos: {

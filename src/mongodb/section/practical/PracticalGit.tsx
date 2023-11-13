@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 import * as React from "react";
-import { CodeBox } from "../../CodeBox";
-import { Content } from "../../Content";
-import { Section } from "../../Section";
-import { Slide } from "../../Slide";
-import { Title } from "../../Title";
+import { CodeBox } from "../../../component/CodeBox";
+import { Content } from "../../../component/Content";
+import { Section } from "../../../component/Section";
+import { Slide } from "../../../component/Slide";
+import { Title } from "../../../component/Title";
 import {
   installMacOs1,
   installMacOs2,
@@ -22,7 +22,7 @@ import {
   gitCloneRepo,
   gitReset,
 } from "../commands";
-import { SubContent } from "../../SubContent";
+import { SubContent } from "../../../component/SubContent";
 
 const useStyle = makeStyles(theme => ({
   limitHeight: {

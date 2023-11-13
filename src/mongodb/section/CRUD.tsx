@@ -1,14 +1,14 @@
 import { makeStyles } from "@material-ui/core";
 import * as React from "react";
-import { CodeBox } from "../CodeBox";
-import { Content } from "../Content";
-import { DataTable } from "../DataTable";
-import { JsonBox } from "../JsonBox";
-import { List } from "../List";
-import { Section } from "../Section";
-import { Slide } from "../Slide";
-import { SubContent } from "../SubContent";
-import { Title } from "../Title";
+import { CodeBox } from "../../component/CodeBox";
+import { Content } from "../../component/Content";
+import { DataTable } from "../../component/DataTable";
+import { JsonBox } from "../../component/JsonBox";
+import { List } from "../../component/List";
+import { Section } from "../../component/Section";
+import { Slide } from "../../component/Slide";
+import { SubContent } from "../../component/SubContent";
+import { Title } from "../../component/Title";
 import {
   createIndex,
   cursorExample,

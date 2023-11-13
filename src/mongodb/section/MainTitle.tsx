@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Slide } from "../Slide";
-import { SubTitle } from "../SubTitle";
-import { Title } from "../Title";
+import { Slide } from "../../component/Slide";
+import { SubTitle } from "../../component/SubTitle";
+import { Title } from "../../component/Title";
 
 
 
