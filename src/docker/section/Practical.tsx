@@ -179,6 +179,30 @@ export const Practical = () => {
       </Section>
       <Section>
         <Slide alignItems="flex-start">
+          <Title>Port Forwarding</Title>
+          <img
+            src="./images/docker_port_forwarding.png"
+            alt="Drivers"
+            className={classes.images}
+          />
+        </Slide>
+        <Slide alignItems="flex-start">
+          <Title>Port Forwarding</Title>
+          <Content>Run the following command :</Content>
+          <CodeBox code="$ docker run -p 80:80 CONTAINER" />
+          <SubContent>
+            <a
+              href="https://docs.docker.com/network/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              documentation
+            </a>
+          </SubContent>
+        </Slide>
+      </Section>
+      <Section>
+        <Slide alignItems="flex-start">
           <Title>Create Image</Title>
           <img
             src="./images/docker_build.png"
