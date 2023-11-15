@@ -39,7 +39,7 @@ export const Technology = () => {
           />
         </Slide>
         <Slide>
-          <Title>MongoDB</Title>
+          <Title>Docker</Title>
           <Content>Supported Desktop OS</Content>
           <img
             src="./images/docker_computer.png"
@@ -48,7 +48,7 @@ export const Technology = () => {
           />
         </Slide>
         <Slide>
-          <Title>MongoDB</Title>
+          <Title>Docker</Title>
           <Content>Supported Server OS (Linux only)</Content>
           <img
             src="./images/docker_server.png"
