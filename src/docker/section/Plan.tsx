@@ -8,13 +8,11 @@ import {Title} from "../../component/Title";
 export const Plan = () => (
     <Slide alignItems="flex-start">
         <Title>Plan <Details>(15/11/2023)</Details></Title>
-
         <Content>I. Fundamentals</Content>
-        <List
-            elements={["Virtualization", "Networking", "Processes"]}
-        />
+        <List elements={["Virtualization", "Networking"]}/>
         <Content>II. Technology</Content>
-        <List elements={["Technology", "???", "???", "DELETE"]}/>
         <Content>III. Concepts</Content>
+        <List elements={["Image", "Container", "Registry"]}/>
+        <Content>IV. Practical</Content>
     </Slide>
 );
