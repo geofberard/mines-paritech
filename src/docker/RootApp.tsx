@@ -9,7 +9,7 @@ import {MainTitle} from "./section/MainTitle";
 import {Plan} from "./section/Plan";
 import {Fundamentals} from "./section/Fundamentals";
 import {Technology} from "./section/Technology";
-import {Concepts} from "./section/Concepts";
+import {Terminology} from "./section/Terminology";
 import {Practical} from "./section/Practical";
 
 export const initReveal = () =>
@@ -40,7 +40,7 @@ export const RootApp: FC = () => {
         <Plan/>
         <Fundamentals/>
         <Technology/>
-        <Concepts/>
+        <Terminology/>
         <Practical/>
       </div>
     </ThemeProvider>

@@ -41,7 +41,7 @@ export const Fundamentals = () => {
         <Slide>
           <Title>Virtualization</Title>
           <img
-            src="./images/matrix.png"
+            src="./images/inception.png"
             alt="Drivers"
             className={classes.images}
           />
@@ -58,7 +58,7 @@ export const Fundamentals = () => {
         <Slide>
           <Title>Virtualization VS Containerization</Title>
           <img
-            src="./images/same.gif"
+            src="./images/the-office.gif"
             alt="Drivers"
             className={classes.images}
           />
