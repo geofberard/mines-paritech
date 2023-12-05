@@ -10,7 +10,7 @@ import { Title } from "../../component/Title";
 export const Plan = () => (
   <Section>
     <Slide alignItems="flex-start">
-      <Title>Plan <Details>(07/12/2022)</Details></Title>
+      <Title>Plan <Details>(06/12/2023)</Details></Title>
       
       <Content>I. MongoDB Presentation</Content>
       <List
@@ -21,7 +21,7 @@ export const Plan = () => (
       <Content>III. Practical</Content>
     </Slide>
     <Slide alignItems="flex-start">
-    <Title>Plan <Details>(09/12/2022)</Details></Title>
+    <Title>Plan <Details>(08/12/2023)</Details></Title>
       <Content>VI. MongoDB Architecture</Content>
       <List elements={["Replica Set", "Sharding"]} />
       <Content>V. Software with MongoDB</Content>

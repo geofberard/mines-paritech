@@ -103,7 +103,7 @@ export const Presentation = () => {
             className="print-with-background"
           />
           <Title>Presentation</Title>
-          <SubTitle>07/12/2022</SubTitle>
+          <SubTitle>06/12/2023</SubTitle>
         </Slide>
       </Section>
       <Section>

@@ -106,7 +106,7 @@ export const Architecture = () => {
             className="print-with-background"
           />
           <Title>Architecture</Title>
-          <SubTitle>09/12/2022</SubTitle>
+          <SubTitle>08/12/2023</SubTitle>
         </Slide>
       </Section>
       <Slide>

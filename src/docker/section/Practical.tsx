@@ -43,7 +43,7 @@ export const Practical = () => {
           <Content>Run the following command :</Content>
           <CodeBox code="$ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]" />
           <Content>with port forwarding :</Content>
-          <CodeBox code="$ docker run -p 8080:80 IMAGE " />
+          <CodeBox code="$ docker run ubuntu:latest" />
           <SubContent>
             <a
               href="https://docs.docker.com/engine/reference/commandline/run/"
