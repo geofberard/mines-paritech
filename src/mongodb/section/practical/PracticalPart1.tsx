@@ -25,6 +25,7 @@ import {
   installToolsMacOs3,
 } from "../commands";
 import { SubContent } from "../../../component/SubContent";
+import {SubTitle} from "../../../component/SubTitle";
 
 const useStyle = makeStyles(theme => ({
   limitHeight: {
@@ -83,30 +84,27 @@ export const PracticalPart1 = () => {
       </Section>
       <Section>
         <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content centered>Run with Docker</Content>
+          <Title>Setup MongoDB<SubTitle>(using Docker)</SubTitle></Title>
           <Content>Create container and start MongoDB Server</Content>
           <CodeBox code={runWithDocker1} />
           <Content>Restart server</Content>
           <CodeBox code={runWithDocker2} />
         </Slide>
         <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content>In another shell, run MongoShell (client)</Content>
+          <Title>Setup MongoDB<SubTitle>(using Docker)</SubTitle></Title>
+          <Content>Start MongoShell client (in another terminal)</Content>
           <CodeBox code={runWithDocker3} />
           <Content centered>Run with Docker</Content>
-          <Content>Import a json file in the container</Content>
+          <Content>Import a json file (ex: <a href="./data-set/enron.json">enron.json</a>) in the container (in another terminal)</Content>
           <CodeBox code={runWithDocker4} />
-          <Content>Load it into the database</Content>
+          <Content>Load the file into the database (in another terminal)</Content>
           <CodeBox code={runWithDocker5} />
         </Slide>
-      </Section>
-      <Section>
         <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content centered>Linux &amp; MacOS</Content>
+          <Title>Install natively</Title>
+          <Content>In case you cannot run the lab with docker :</Content>
           <Content>
-            Documentation{" "}
+            Documentation to install on Linux and MacOS{" "}
             <a
               href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x-tarball/"
               target="_blank"
@@ -116,96 +114,9 @@ export const PracticalPart1 = () => {
             </a>
           </Content>
           <Content>
-            Download mongodb zip{" "}
-            <a
-              href="https://www.mongodb.com/download-center#community"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-          </Content>
-          <Content>Unzip and go in the file</Content>
-          <CodeBox code={installMacOs1} />
-          <Content>Create the storage directory</Content>
-          <CodeBox code={installMacOs2} />
-        </Slide>
-        <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content centered>Linux &amp; MacOS</Content>
-          <Content>Go to the directory</Content>
-          <CodeBox code={installMacOs3} />
-          <Content>Run MongoDB Daemon (server)</Content>
-          <CodeBox code={installMacOs4} />
-          <Content>Run MongoShell (client) in an other shell</Content>
-          <CodeBox code={installMacOs5} />
-        </Slide>
-        <Slide alignItems="flex-start">
-          <Title>Install MongoDB Tools</Title>
-          <Content centered>Linux &amp; MacOS</Content>
-          <Content>
-            Documentation{" "}
+            Documentation to install on Windows{" "}
             <a
               href="https://docs.mongodb.com/database-tools/installation/installation/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-          </Content>
-          <Content>Download zip and unzip it</Content>
-          <CodeBox code={installToolsMacOs1} />
-          <Content>Go to the bin directory</Content>
-          <CodeBox code={installToolsMacOs2} />
-          <Content>run mongoimport</Content>
-          <CodeBox code={installToolsMacOs3} />
-        </Slide>
-      </Section>
-      <Section>
-        <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content centered>Windows</Content>
-          <Content>
-            Installation procedure is detailed{" "}
-            <a
-              href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows-unattended/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-          </Content>
-          <Content>
-            Download mongodb zip{" "}
-            <a
-              href="https://www.mongodb.com/download-center#community"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-          </Content>
-          <Content>Install it</Content>
-          <Content>Create the storage directory </Content>
-          <CodeBox code={installWindows1} />
-        </Slide>
-        <Slide alignItems="flex-start">
-          <Title>Install MongoDB</Title>
-          <Content centered>Windows</Content>
-          <Content>Go to the directory</Content>
-          <CodeBox code={installWindows2} />
-          <Content>Run MongoDB Daemon (server)</Content>
-          <CodeBox code={installWindows3} />
-          <Content>Run MongoShell (client) in an other cmd</Content>
-          <CodeBox code={installWindows4} />
-        </Slide>
-        <Slide alignItems="flex-start">
-          <Title>Install MongoDB Tools</Title>
-          <Content centered>Windows</Content>
-          <Content centered>
-            Installation procedure is detailed{" "}
-            <a
-              href="https://docs.mongodb.com/database-tools/installation/installation-windows/"
               target="_blank"
               rel="noopener noreferrer"
             >
