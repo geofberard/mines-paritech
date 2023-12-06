@@ -31,7 +31,8 @@ export const Update = () => {
       <Slide alignItems="flex-start">
         <Title>Update</Title>
         <Content>Syntax</Content>
-        <CodeBox code="<collection>.update( {find_query} , {update_query}, {update_params} )" />
+        <CodeBox code="db.<collection>.updateOne( {find_query} , {update_query}, {update_params} )" />
+        <CodeBox code="db.<collection>.updateMany( {find_query} , {update_query}, {update_params} )" />
         <Content>Example</Content>
         <CodeBox code='update({surname : "Hugo"}, {surname : "Hugo", groups : [ "Writer", "Painter"]})' />
       </Slide>
@@ -79,17 +80,10 @@ export const Update = () => {
       </Slide>
       <Slide>
         <Title>Update</Title>
-        <Content>Multiple update</Content>
+        <Content>Update or insert</Content>
         <SubContent>=&gt;Upsert</SubContent>
         <CodeBox code="{ upsert : true }     // As update third parameter" />
         <CodeBox code={upsert} />
-      </Slide>
-      <Slide>
-        <Title>Update</Title>
-        <Content>Update or insert</Content>
-        <CodeBox code="{ multi : true }     // As update third parameter" />
-        <CodeBox code={updateMulti} />
-        <CodeBox code='WriteResult({ "nMatched" : 5, "nUpserted" : 0, "nModified" : 5 })' />
       </Slide>
     </Section>
   );

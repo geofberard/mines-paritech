@@ -121,9 +121,9 @@ export const CRUD = () => {
         <Slide alignItems="flex-start">
           <Title>Read</Title>
           <Content centered>Count</Content>
-          <CodeBox code="> db.zips.count({find_query})" />
+          <CodeBox code="> db.<collection>.countDocuments({find_query})" />
           <Content>Example</Content>
-          <CodeBox code='> db.zips.count({state:"NY"})' />
+          <CodeBox code='> db.zips.countDocuments({state:"NY"})' />
         </Slide>
       </Section>
       <Section>
@@ -147,7 +147,8 @@ export const CRUD = () => {
         <Slide alignItems="flex-start">
           <Title>Delete</Title>
           <Content>Syntax</Content>
-          <CodeBox code="<collection>.remove({find_query})" />
+          <CodeBox code="<collection>.deleteOne({find_query})" />
+          <CodeBox code="<collection>.deleteMany({find_query})" />
           <Content>Drop a collection</Content>
           <CodeBox code="<collection>.drop()" />
         </Slide>
